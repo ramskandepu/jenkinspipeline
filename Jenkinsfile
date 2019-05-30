@@ -4,15 +4,17 @@ pipeline {
     stages{
         stage ('Initialize') {
             steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = {M2_HOME}"
-                    '''
-            }
+                echo "Testing..."
+                }
         }
         stage('Build'){
             steps {
-                echo 'Hello World'
+                echo 'Building...'
+            }
+        }
+        Stage ('Deploy'){
+            steps {
+                echo "Deploying..."
             }
         }
     }
